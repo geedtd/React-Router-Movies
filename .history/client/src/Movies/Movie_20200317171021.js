@@ -27,7 +27,7 @@ const Movie = (props) => {
   // const addToSavedList = movie => {
   //   setSavedList( [...savedList, movie] );
   // };
-  const saveMovie = () => {  const addToSavedList = props.addToSavedList;    addToSavedList(movie)  } 
+  
 
   if (!movie) {
     return <div>Loading movie information...</div>;
@@ -52,7 +52,7 @@ const Movie = (props) => {
           </div>
         ))}
       </div>
-      <button className="save-button" onClick={saveMovie}> Doesn't Work Save</button>
+      <button className="save-button" onClick={addToSavedList}> Doesn't Work Save</button>
     </div>
   );
 }
